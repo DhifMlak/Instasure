@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-login *ngIf="isLoggedIn else dashboard"></app-login>
+
+      
+      <ng-template #dashboard>
+            <div class="page-wrapper">
+                    <app-header></app-header>
+                    <div class="page-container">
+                        <app-sidebar></app-sidebar>
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+      </ng-template>
+
+
