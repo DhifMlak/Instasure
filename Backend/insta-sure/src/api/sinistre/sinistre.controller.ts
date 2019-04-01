@@ -11,4 +11,9 @@ export class SinistreController {
         return this.sinistreService.findAll();
     }
 
+    @Get('count')
+    async count() {
+        return this.sinistreService.count();
+    }
+
 }

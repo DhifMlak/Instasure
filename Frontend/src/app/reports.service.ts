@@ -5,10 +5,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ReportsService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   uploadReport(file) {
     return this.http.post(`http://localhost:3000/reports/new`, file);
+  }
+
+  getSinistreCount(): any {
+    return this.http.get('http://localhost:3000/sinistre/count');
   }
 
 }

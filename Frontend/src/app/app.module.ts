@@ -11,6 +11,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FileDropModule } from 'ngx-file-drop';
 import { UploadReportComponent } from './upload-report/upload-report.component';
+import { CsvComponent } from './csv/csv.component';
+import { PapaParseModule } from 'ngx-papaparse';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +22,16 @@ import { UploadReportComponent } from './upload-report/upload-report.component';
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    UploadReportComponent
+    UploadReportComponent,
+    CsvComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FileDropModule,
     HttpClientModule,
+    PapaParseModule,
+    ChartsModule,
     FormsModule,
     ReactiveFormsModule
   ],

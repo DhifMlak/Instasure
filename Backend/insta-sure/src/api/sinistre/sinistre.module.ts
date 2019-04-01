@@ -8,6 +8,6 @@ import { sinistreSchema } from './schemas/sinistre.schema';
   imports: [
     MongooseModule.forFeature([{ name: 'Sinistre', schema: sinistreSchema }])],
   controllers: [SinistreController],
-  providers: [SinistreService]
+  providers: [SinistreService],
 })
 export class SinistreModule {}
