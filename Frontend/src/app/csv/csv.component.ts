@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ReportsService } from '../reports.service';
 import { ChartType, ChartOptions } from 'chart.js';
-import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
+import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip, MultiDataSet } from 'ng2-charts';
 @Component({
   selector: 'app-csv',
   templateUrl: './csv.component.html',
   styleUrls: ['./csv.component.css']
 })
 export class CsvComponent implements OnInit {
-  sain;
-  fraude;
-  public pieChartOptions: ChartOptions = {
-    responsive: true,
-  };
-  public pieChartLabels: Label[] = ['Sain', 'Fraude'];
-  public pieChartData: SingleDataSet = [this.sain, this.fraude];
-  public pieChartType: ChartType = 'pie';
-  public pieChartLegend = true;
-  public pieChartPlugins = [];
+
+  public doughnutChartLabels: Label[] = ['Ariana', 'Tunis', 'Sousse','Ben Arous', 'kairouane'];
+  public doughnutChartData: MultiDataSet = [
+    [350, 450, 100 , 200 , 120],
+    
+  ];
+  public doughnutChartType: ChartType = 'doughnut';
+
+
+
 
   constructor(private sinistreService: ReportsService) {
     monkeyPatchChartJsTooltip();
@@ -26,5 +26,14 @@ export class CsvComponent implements OnInit {
 
   ngOnInit() {
 
-}
+  }
+
+  // events
+  public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
+    console.log(event, active);
+  }
+
+  public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
+    console.log(event, active);
+  }
 }
