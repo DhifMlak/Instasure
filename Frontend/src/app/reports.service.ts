@@ -14,5 +14,8 @@ export class ReportsService {
   getSinistreCount(): any {
     return this.http.get('http://localhost:3000/sinistre/count');
   }
+  getSinistreByYear(year): any {
+    return this.http.get('http://localhost:3000/sinistre/year/' + year);
+  }
 
 }

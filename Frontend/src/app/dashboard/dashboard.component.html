@@ -47,7 +47,7 @@
                     </div>
                     <div class="progress-info">
                         <div class="progress">
-                            <span style="width: 76%;" class="progress-bar progress-bar-success green-sharp">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success green-sharp">
                                 <span class="sr-only"></span>
                             </span>
                         </div>
@@ -133,20 +133,20 @@
             </div>
             <div class="col-lg-6 col-xs-12 col-sm-12">
                 <div class="portlet light ">
-                    <div class="portlet-title">
-                        <div class="caption ">
-                            <span class="caption-subject font-dark bold uppercase">Finance</span>
-                            <span class="caption-helper">distance stats...</span>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="btn btn-circle green btn-outline btn-sm">
-                                <i class="fa fa-pencil"></i> Export </a>
-                            <a href="#" class="btn btn-circle green btn-outline btn-sm">
-                                <i class="fa fa-print"></i> Print </a>
-                        </div>
-                    </div>
+                   
                     <div class="portlet-body">
-                        <div id="dashboard_amchart_3" class="CSSAnimationChart"></div>
+                        <div>
+                            <div *ngIf="barChartData" style="display: block">
+                              <canvas baseChart
+                                [datasets]="barChartData"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [legend]="barChartLegend"
+                                [colors]="pieChartColors"
+                                [chartType]="barChartType">
+                              </canvas>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
