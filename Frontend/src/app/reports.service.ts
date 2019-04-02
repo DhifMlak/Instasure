@@ -5,6 +5,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ReportsService {
+  createReport(value: any): any {
+    return this.http.post(`http://localhost:3000/reports/create`, value);  }
   constructor(private http: HttpClient) { }
 
   uploadReport(file) {

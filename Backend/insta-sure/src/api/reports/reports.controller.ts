@@ -1,4 +1,4 @@
-import { Controller, Post, UseInterceptors, FileInterceptor, Res, UploadedFile, Param } from '@nestjs/common';
+import { Controller, Post, UseInterceptors, FileInterceptor, Res, UploadedFile, Param, Body } from '@nestjs/common';
 import * as multer from 'multer';
 import * as path from 'path';
 import { spawn } from 'child_process';
@@ -31,11 +31,11 @@ export class ReportsController {
     }
 
     @Post('test')
-    async testPython(@Res() res ) {
+    async testPython(@Res() res) {
 
         const pyProg = spawn('python', ['./scripts/script.py']);
 
-        pyProg.stdout.on('data',  (data) => {
+        pyProg.stdout.on('data', (data) => {
             // tslint:disable-next-line:no-console
             console.log(data.toString());
             res.write(data);
@@ -43,5 +43,15 @@ export class ReportsController {
         });
 
     }
+
+    @Post('create')
+    async createReport(@Res() res, @Body() obj: any) {
+        this.reportsService.createReport(obj);
+
+        res.send('done');
+
+    }
+
+
 
 }

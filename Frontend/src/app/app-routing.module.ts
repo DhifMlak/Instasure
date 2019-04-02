@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UploadReportComponent } from './upload-report/upload-report.component';
 import { CsvComponent } from './csv/csv.component';
+import { ReportFormComponent } from './report-form/report-form.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'csv', component: CsvComponent },
   { path: 'upload', component: UploadReportComponent },
+  { path: 'reportform', component: ReportFormComponent },
 
 ];
 

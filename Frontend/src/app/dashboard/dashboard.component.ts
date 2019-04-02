@@ -1,13 +1,20 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ReportsService } from '../reports.service';
 import { ChartType, ChartOptions, ChartDataSets } from 'chart.js';
-import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
+import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip, MultiDataSet } from 'ng2-charts';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
+  public doughnutChartLabels: Label[] = ['Ariana', 'Tunis', 'Sousse','Ben Arous', 'kairouan'];
+  public doughnutChartData: MultiDataSet = [
+    [350, 450, 100 , 200 , 120],
+
+  ];
+  public doughnutChartType: ChartType = 'doughnut';
+
 
   public totSinistres: number;
   public sainSinstres: number;
@@ -17,7 +24,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     responsive: true,
   };
 
-  public pieChartLabels: Label[] = [['Sain'], ['Fraude']];
+  public pieChartLabels: Label[] = [['Sain 96%'], ['Fraude 4%']];
   public pieChartData: number[] = [];
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
@@ -45,7 +52,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   public barChartLegend = true;
 
   public barChartData: ChartDataSets[] = [
-    { data: [0.30, 0.04] , label:'Ratio'},];
+    { data: [0.30, 0.04] , label:'Ratio Sinistralité'},];
 
   sin2017 = 15;
   sin2018 = 20;

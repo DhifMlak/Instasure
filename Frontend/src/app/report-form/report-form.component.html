@@ -1,0 +1,102 @@
+<div class="page-content-wrapper">
+  <!-- BEGIN CONTENT BODY -->
+  <div class="page-content">
+      <!-- BEGIN PAGE HEADER-->
+
+      <!-- BEGIN PAGE BAR -->
+      <div class="page-bar">
+          <ul class="page-breadcrumb">
+              <li>
+                  <a href="index.html">Home</a>
+                  <i class="fa fa-circle"></i>
+              </li>
+              <li>
+                  <span>Dashboard</span>
+              </li>
+          </ul>
+          <div class="page-toolbar">
+              <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+                  <i class="icon-calendar"></i>&nbsp;
+                  <span class="thin uppercase hidden-xs"></span>&nbsp;
+                  <i class="fa fa-angle-down"></i>
+              </div>
+          </div>
+      </div>
+      <!-- END PAGE BAR -->
+      <!-- BEGIN PAGE TITLE-->
+      <h1 class="page-title"> Report Form
+      </h1>
+      <!-- END PAGE TITLE-->
+      <!-- END PAGE HEADER-->
+<div class="center">
+<form [formGroup]="reportForm">
+  <label class="control-label ">numero_sinistre</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="numero_sinistre" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">ENERGIE</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="ENERGIE" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">NUM_POLICE</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="NUM_POLICE" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">annee_survenance</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="annee_survenance" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">Date_entree_RGA</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="Date_entree_RGA" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">reglement_tot</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="reglement_tot" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">VALEUR_VENALE</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="VALEUR_VENALE" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">TYPE_CLIENT</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="TYPE_CLIENT" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">VILLE</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="VILLE" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">Marque</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="Marque" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">GOUVERNORAT</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="GOUVERNORAT" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">Date_Reception_devis</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="Date_Reception_devis" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">PUISSANCE</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="PUISSANCE" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">ANNEE</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="ANNEE" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">TOT_reparation</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="TOT_reparation" type="text" autocomplete="off"
+     />
+
+  <label class="control-label ">VALEUR_NEUF</label>
+  <input class="form-control form-control-solid placeholder-no-fix" formControlName="VALEUR_NEUF" type="text" autocomplete="off"
+     />
+     <button type="submit" (click)="onSubmit(reportForm)" class="btn green uppercase">Ajouter</button>
+
+
+</form>
+</div>
+  </div>
+</div>  

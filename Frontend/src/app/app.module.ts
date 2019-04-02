@@ -14,6 +14,7 @@ import { UploadReportComponent } from './upload-report/upload-report.component';
 import { CsvComponent } from './csv/csv.component';
 import { PapaParseModule } from 'ngx-papaparse';
 import { ChartsModule } from 'ng2-charts';
+import { ReportFormComponent } from './report-form/report-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ChartsModule } from 'ng2-charts';
     SidebarComponent,
     DashboardComponent,
     UploadReportComponent,
-    CsvComponent
+    CsvComponent,
+    ReportFormComponent
   ],
   imports: [
     BrowserModule,

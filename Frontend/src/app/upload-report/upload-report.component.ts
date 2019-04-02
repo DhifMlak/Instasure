@@ -9,6 +9,8 @@ import { ReportsService } from '../reports.service';
 })
 export class UploadReportComponent implements OnInit {
   public files: UploadFile[] = [];
+  loading = true;
+
   constructor(private reportService: ReportsService) { }
 
   ngOnInit() {
@@ -32,7 +34,7 @@ export class UploadReportComponent implements OnInit {
 
           this.reportService.uploadReport( formData)
             .subscribe(data => {
-              // Sanitized logo returned from backend
+              setTimeout(function(){ alert("Dossier Frauduleux : 30%"); }, 3000);              // Sanitized logo returned from backend
             }, err => {
                 console.log(err);
             });
